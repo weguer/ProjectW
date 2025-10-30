@@ -2,6 +2,11 @@
 
 **Project W** é apenas um aplicativo que fiz para utilização propria, utilizando o ludusavi-cli e que serve para backup e restauração de saves de jogos com integração ao Google Drive. Desenvolvida com Electron, React e TypeScript, oferece uma interface moderna e intuitiva para gerenciar seus saves de jogos em múltiplas plataformas.
 
+<p align="center">
+  <img src="https://i.imgur.com/kKtFpNF.png" width="300" alt="Logo do Projeto">
+</p>
+
+
 ## Funcionalidades
 
 - 🔍 Escaneamento automático de jogos instalados
@@ -9,6 +14,7 @@
 - 🔄 Restauração de saves com um clique
 - 🌐 Suporte multiplataforma (Windows e Linux)
 - 🎮 Compatível com Steam, GOG, Epic Games e jogos personalizados
+
 
 ## Requisitos do Sistema
 
