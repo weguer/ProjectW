@@ -21,16 +21,16 @@
 ### Método 1: Instalador (Recomendado)
 
 1. **Baixe o instalador**:
-   - Acesse a seção [Releases](https://github.com/seu-usuario/project-w/releases) do projeto
+   - Acesse a seção [Releases](https://github.com/weguer/projectw/releases) do projeto
    - Baixe o instalador apropriado para seu sistema:
      - **Windows**: `Project W Setup X.X.X.exe`
-     - **Linux**: `Project-W-X.X.X.AppImage` ou `project-w_X.X.X_amd64.deb`
+     - **Linux**: `projectw-X.X.X.AppImage` ou `projectw_X.X.X_amd64.deb`
 
 2. **Instale o aplicativo**:
    - **Windows**: Execute o arquivo `.exe` e siga o assistente de instalação
    - **Linux**: 
-     - AppImage: Dê permissão de execução (`chmod +x Project-W-X.X.X.AppImage`) e execute
-     - DEB: Instale com `sudo dpkg -i project-w_X.X.X_amd64.deb`
+     - AppImage: Dê permissão de execução (`chmod +x projectw-X.X.X.AppImage`) e execute
+     - DEB: Instale com `sudo dpkg -i projectw_X.X.X_amd64.deb`
 
 ### Método 2: A partir do código-fonte
 
@@ -41,8 +41,8 @@
 
 2. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seu-usuario/project-w.git
-   cd project-w
+   git clone https://github.com/seu-usuario/projectw.git
+   cd projectw
    ```
 
 3. **Instale as dependências**:
@@ -126,7 +126,3 @@ Para usar a integração com Google Drive, você precisa configurar as credencia
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-## Suporte
-
-Para suporte, abra uma issue no repositório do GitHub ou entre em contato através do e-mail: suporte@projectw.com
