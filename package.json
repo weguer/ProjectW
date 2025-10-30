@@ -1,0 +1,82 @@
+{
+  "name": "project-w",
+  "version": "1.0.0",
+  "description": "Game Save Backup & Restore Tool with Google Drive Integration",
+  "main": "./out/main/index.js",
+  "author": "Project W Team",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write .",
+    "dist": "electron-builder",
+    "download-icons": "node scripts/download-icons.js",
+    "build:win": "npm run download-icons && node scripts/download-ludusavi.js win && npm run build && electron-builder --win",
+    "build:linux": "npm run download-icons && node scripts/download-ludusavi.js linux && npm run build && electron-builder --linux"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.2",
+    "@electron-toolkit/utils": "^4.0.0",
+    "axios": "^1.12.2",
+    "dotenv": "^17.2.3",
+    "electron-store": "^8.2.0",
+    "googleapis": "^140.0.1",
+    "ico-endec": "^0.1.6",
+    "png-to-ico": "^3.0.1",
+    "sharp": "^0.34.4",
+    "tar": "^7.4.3",
+    "uuid": "^13.0.0",
+    "yaml": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@types/tar": "^6.1.13",
+    "@types/uuid": "^10.0.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "electron": "^33.4.11",
+    "electron-builder": "^26.0.12",
+    "electron-vite": "^3.0.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.4.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.77.8",
+    "typescript": "^5.3.3",
+    "vite": "5.4.20"
+  },
+  "build": {
+    "appId": "com.projectw.app",
+    "productName": "Project W",
+    "directories": {
+      "buildResources": "public"
+    },
+    "icon": "public/icon.ico",
+    "files": [
+      "out/**/*",
+      "node_modules/**/*",
+      "package.json",
+      "ludusavi/**/*"
+    ],
+    "win": {
+      "icon": "public/icon.ico",
+      "target": "nsis"
+    },
+    "linux": {
+      "icon": "public",
+      "target": ["AppImage", "deb"]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}

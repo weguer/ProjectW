@@ -1,0 +1,59 @@
+{
+  "appId": "com.projectw.backup",
+  "productName": "Project W",
+  "directories": {
+    "output": "dist"
+  },
+  "files": [
+    "out/**/*",
+    "resources/**/*",
+    ".env"
+  ],
+  "win": {
+    "target": [
+      "nsis"
+    ],
+    "icon": "public/icon.ico",
+    "signAndEditExecutable": false
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "installerIcon": "public/icon.ico",
+    "uninstallerIcon": "public/icon.ico",
+    "artifactName": "${productName} Setup ${version}.${ext}"
+  },
+  "mac": {
+    "category": "public.app-category.utilities",
+    "icon": "public/icon.ico"
+  },
+  "linux": {
+    "target": [
+      "AppImage"
+    ],
+    "icon": "public/icon.png"
+  },
+  "extraResources": [
+    {
+      "from": "ludusavi/",
+      "to": "ludusavi/"
+    },
+    {
+      "from": "public/icon.ico",
+      "to": "./"
+    },
+    {
+      "from": "public/icon.png",
+      "to": "./"
+    },
+    {
+      "from": ".env",
+      "to": "./"
+    }
+  ],
+  "extraFiles": [
+    ".env"
+  ]
+}

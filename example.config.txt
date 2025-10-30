@@ -1,0 +1,10 @@
+runtime:
+  threads: ~
+release:
+  check: true
+manifest:
+  enable: false
+  secondary:
+    - url: "link/manifest.yaml"
+
+......... e o restante da configuração.
